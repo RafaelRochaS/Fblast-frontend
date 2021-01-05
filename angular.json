@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/finantialBlast-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -123,6 +124,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "finantialBlast"
 }
