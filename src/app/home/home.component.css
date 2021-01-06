@@ -1,0 +1,37 @@
+.title {
+    font-size: 0.85em;
+    margin: auto;
+}
+
+.subtitle {
+    font-size: 0.65em;
+    margin: -1.3em auto auto auto;
+    padding-left: 1.9em;
+}
+
+.bottom-row {
+    height: 1em;
+}
+
+.upper-row {
+    flex: 1 2;
+}
+
+.logo {
+    margin-top: 2.5em;
+    margin-bottom: 1.8em;
+}
+
+.content {
+    margin: auto;
+    max-width: 80%;
+    text-align: justify;
+}
+
+.card {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

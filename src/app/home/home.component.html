@@ -1,8 +1,36 @@
 <mat-toolbar color="primary">
-    <span>Finantial Blast - Helping You Pay The Bills!</span>
+    <mat-toolbar-row>
+        <span><button mat-icon-button matTooltip="Options" aria-label="Options"><mat-icon>menu</mat-icon></button></span>
+        <span class="mat-h2 title">Finantial Blast</span>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="bottom-row">
+        <span class="subtitle">Helping You Pay The Bills!</span>
+    </mat-toolbar-row>
 </mat-toolbar>
 <div fxLayout="column" fxLayoutAlign="center center">
     <img class="logo" src="../../assets/images/download.jpeg" alt="Finantial Blast Logo">
-    <p class="mat-h3">Welcome to Finantial Blast! Bla bla bla bla bla</p>
-    <p class="mat-display-1 login-text">Login</p>
+    <p class="mat-h3 content">
+        Welcome to Finantial Blast, the app that will help you save money! 
+        <br />
+        <br />
+        By logging every expense and calculating the monthly income,
+        you can measure where your money is going, where you need to cut costs, and how to better do it. With graphs, statistics and images, saving money is simple and enjoyable!
+    </p>
+    <div fxLayout="row" class="card">
+        <mat-card fxFlex="350px">
+            <mat-card-header>
+                <mat-card-title>
+                    <div class="mat-headline center">Login</div>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form class="login-form">
+                    <mat-form-field>
+                        <mat-label>Username</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </div>
