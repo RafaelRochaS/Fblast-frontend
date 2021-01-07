@@ -30,8 +30,25 @@
 
 .card {
     margin-top: 2em;
+    margin-bottom: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.input {
+    width: 90%;
+}
+
+.remember {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.but-sign-in {
+    width: 30%;
+}
+
+.but-register {
+    width: 40%;
+}

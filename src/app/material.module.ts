@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 const modules = [
   MatToolbarModule,
@@ -12,7 +13,8 @@ const modules = [
   MatButtonModule,
   MatTooltipModule,
   MatCardModule,
-  MatInputModule
+  MatInputModule,
+  MatCheckboxModule
 ];
 
 
