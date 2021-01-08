@@ -1,0 +1,49 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span><button mat-icon-button matTooltip="Options" aria-label="Options"><mat-icon>menu</mat-icon></button></span>
+        <span class="mat-h2 title">Finantial Blast</span>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="bottom-row">
+        <span class="subtitle">Helping You Pay The Bills!</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div fxLayout="column" fxLayoutAlign="center center">
+    <img class="logo" src="../../assets/images/download.jpeg" alt="Finantial Blast Logo">
+    <p class="mat-h3 content">
+        Welcome to Finantial Blast, the app that will help you save money! 
+        <br />
+        <br />
+        By logging every expense and calculating the monthly income,
+        you can measure where your money is going, where you need to cut costs, and how to better do it. With graphs, statistics and images, saving money is simple and enjoyable!
+    </p>
+    <div fxLayout="row" class="card">
+        <mat-card style="text-align: center; width: 75%">
+            <mat-card-header>
+                <mat-card-title>
+                    <p class="mat-headline">Login</p>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form class="login-form">
+                    <mat-form-field class="input">
+                        <mat-label>Username</mat-label>
+                        <input matInput [formControl]="usernameControl" required>
+                    </mat-form-field>
+                    <mat-form-field class="input">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hidePassword ? 'password' : 'text'" [formControl]="passwordControl" required>
+                        <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                            <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <section class="remember" fxLayoutGap="5em">
+                        <mat-checkbox>Remember me</mat-checkbox>
+                        <button mat-raised-button color="primary" class="but-sign-in">Sign In</button>
+                    </section>
+                </form>
+                <p class="mat-h3">Don't have an account?</p>
+                <button mat-raised-button color="primary" class="but-register">Register</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
