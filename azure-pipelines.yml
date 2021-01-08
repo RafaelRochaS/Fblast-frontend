@@ -39,7 +39,7 @@ jobs:
   - script: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
     displayName: Test  
 
-  - script: npx audit-ci -l
+  - script: npx audit-ci -m
     displayName: Package security audit
 
 - job: SonarCloud
