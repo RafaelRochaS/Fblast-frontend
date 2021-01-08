@@ -9,24 +9,43 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+jobs:
+- job: "Build_and_test"
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '10.x'
+    displayName: 'Install Node.js'
 
-- script: |
-    npm install -g @angular/cli
-    npm install
-    ng build --prod
-  displayName: 'npm install and build'
+  - script: |
+      npm install -g @angular/cli
+      npm install
+      ng build --prod
+    displayName: 'npm install and build'
 
-- script: ng lint
-  displayName: Lint
-  
-- script: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-  displayName: Test  
+  - script: ng lint
+    displayName: Lint
+    
+  - script: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+    displayName: Test  
 
-- script: npx audit-ci -l
-  displayName: Package security audit
-  
+  - script: npx audit-ci -l
+    displayName: Package security audit
+
+- job: "SonarCloud"
+  steps:
+  - task: SonarCloudPrepare@1
+    inputs:
+      SonarCloud: 'Sonarcloud'
+      organization: 'rafaelsouza0095'
+      scannerMode: 'CLI'
+      configMode: 'manual'
+      cliProjectKey: 'RafaelSouza0095_FinantialBlast'
+      cliProjectName: 'FinantialBlast'
+      cliSources: '.'
+
+  - task: SonarCloudAnalyze@1
+
+  - task: SonarCloudPublish@1
+    inputs:
+      pollingTimeoutSec: '300'
