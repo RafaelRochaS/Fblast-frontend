@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 jobs:
-- job: "Build_and_test"
+- job: Build_and_test
   steps:
   - task: NodeTool@0
     inputs:
@@ -32,7 +32,8 @@ jobs:
   - script: npx audit-ci -l
     displayName: Package security audit
 
-- job: "SonarCloud"
+- job: SonarCloud
+  dependsOn: Build_and_test
   steps:
   - task: SonarCloudPrepare@1
     inputs:
