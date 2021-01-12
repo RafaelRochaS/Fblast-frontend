@@ -23,9 +23,10 @@ jobs:
   - script: |
       npm install -g @angular/cli
       npm install
-      ng build --prod
-    displayName: 'npm install and build'
+    displayName: 'NPM Install'
 
+  - script: ng build --prod
+    displayName: 'NG Build'
   - task: Cache@2
     inputs:
       key: 'npm | "$(Agent.OS)" | package-lock.json'
