@@ -1,0 +1,40 @@
+<button mat-icon-button class="btn-back" color="black" routerLink="/home">
+    <mat-icon>arrow_back_ios</mat-icon>
+</button>
+<div fxLayout="column" fxLayoutAlign="center center">
+    <p class="mat-display-1">Registration</p>
+    <p class="mat-body-strong content">
+        Welcome to financial control! Take the first step in controlling your money.
+        Fill out the form below and get started owning your finances!
+    </p>
+    <mat-card style="text-align: center; width: 75%;" class="card">
+        <mat-card-content>
+            <form class="login-form">
+                <mat-form-field class="input">
+                    <mat-label>Username</mat-label>
+                    <input matInput [formControl]="usernameControl" required>
+                </mat-form-field>
+                <mat-form-field class="input">
+                    <mat-label>First Name</mat-label>
+                    <input matInput [formControl]="firstNameControl" required>
+                </mat-form-field>
+                <mat-form-field class="input">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput [formControl]="lastNameControl" required>
+                </mat-form-field>
+                <mat-form-field class="input">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [formControl]="emailControl" required>
+                </mat-form-field>
+                <mat-form-field class="input">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hidePassword ? 'password' : 'text'" [formControl]="passwordControl" required>
+                    <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                        <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <button mat-raised-button color="primary" class="btn-submit">Submit</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

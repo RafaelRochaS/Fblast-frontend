@@ -6,6 +6,12 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  {
+    path: 'registration',
+    loadChildren:
+      () => import('./registration/registration.module')
+        .then(m => m.RegistrationModule),
+  },
   { path: '**', redirectTo: '/home'}
 ];
 

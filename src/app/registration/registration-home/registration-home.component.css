@@ -1,0 +1,17 @@
+.btn-back {
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.content {
+    margin-top: -2.5em;
+    margin-bottom: 2.3em;
+}
+
+.btn-submit {
+    width: 40%;
+    margin-top: 0.8em;
+}
