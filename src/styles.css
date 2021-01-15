@@ -12,3 +12,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 .input {
     width: 90%;
 }
+
+.card-align {
+    text-align: center; 
+    width: 75%;
+}

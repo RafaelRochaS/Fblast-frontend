@@ -12,6 +12,12 @@ const routes: Routes = [
       () => import('./registration/registration.module')
         .then(m => m.RegistrationModule),
   },
+  {
+    path: 'main',
+    loadChildren:
+      () => import('./logged/logged.module')
+        .then(m => m.LoggedModule),
+  },
   { path: '**', redirectTo: '/home'}
 ];
 
