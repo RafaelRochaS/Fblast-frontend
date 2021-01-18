@@ -33,3 +33,17 @@
 .span-size {
     height: 9em;
 }
+
+.table {
+    height: 14em;
+}
+
+.exp-table {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.table-text {
+    font-size: smaller;
+}
+
