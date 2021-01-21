@@ -6,6 +6,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTableModule } from '@angular/material/table';
 
 const modules = [
   MatToolbarModule,
@@ -14,7 +15,8 @@ const modules = [
   MatTooltipModule,
   MatCardModule,
   MatInputModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatTableModule
 ];
 
 

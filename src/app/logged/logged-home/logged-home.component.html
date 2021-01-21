@@ -1,0 +1,53 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+    <mat-card class="card-align">
+        <mat-card-content>
+            <span class="span-size">
+                <mat-icon fxFlex="40%" class="profile">account_circle</mat-icon>
+                <span class="mat-body-2 welcome center-text">Welcome, {{username}}!</span>
+            </span>
+            <hr>
+            <span class="income span-size">
+                <span class="mat-body center-text" fxFlex="40%">
+                    Remaining income this month:
+                </span>
+                <div class="income-text center-text">
+                    <span class="mat-body-2">
+                        {{income}}
+                    </span>
+                </div>
+            </span>
+            <hr>
+            <span class="table">
+                <span class="center-text" fxFlex="40%">
+                    Upcoming expenses:
+                </span>
+                <div class="exp-table">
+                    <table mat-table [dataSource]="expensesTable" style="table-layout: fixed;" 
+                        class="mat-elevation-z8" aria-describedby="Table containing expenses">
+                        <ng-container matColumnDef="name">
+                            <th scope="col" mat-header-cell *matHeaderCellDef>Item</th>
+                            <td mat-cell *matCellDef="let item" class="table-text">{{item.name}}</td>
+                        </ng-container>
+                        <ng-container matColumnDef="value">
+                            <th scope="col" mat-header-cell *matHeaderCellDef>Value</th>
+                            <td mat-cell *matCellDef="let item" class="table-text">{{item.value | currency}}</td>
+                        </ng-container>
+                        <ng-container matColumnDef="date">
+                            <th scope="col" mat-header-cell *matHeaderCellDef>Date</th>
+                            <td mat-cell *matCellDef="let item" class="table-text">{{item.date | date:'shortDate'}}</td>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                    </table>
+                </div>
+            </span>
+        </mat-card-content>
+        <hr>
+        <mat-card-actions style="height: 5em;">
+            <div fxLayout="row" fxFill fxLayoutAlign="space-evenly center">
+                <button mat-raised-button color="primary" class="btn">Expenses</button>
+                <button mat-raised-button color="primary" class="btn">Income</button>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>
