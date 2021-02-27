@@ -5,10 +5,11 @@ import { LoggedRoutingModule } from './logged-routing.module';
 import { LoggedHomeComponent } from './logged-home/logged-home.component';
 import { MaterialModule } from '../material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ExpensesComponent } from './expenses/expenses.component';
 
 
 @NgModule({
-  declarations: [LoggedHomeComponent],
+  declarations: [LoggedHomeComponent, ExpensesComponent],
   imports: [
     CommonModule,
     LoggedRoutingModule,
