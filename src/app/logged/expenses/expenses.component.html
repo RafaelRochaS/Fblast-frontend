@@ -3,24 +3,11 @@
         <mat-card class="card-align">
             <mat-card-content>
                 <span class="span-size">
-                    <mat-icon fxFlex="40%" class="profile">account_circle</mat-icon>
-                    <span class="mat-body-2 welcome center-text">Welcome, {{user.name}}!</span>
+                    <span class="mat-body-2 welcome center-text">Current Expenses</span>
                 </span>
-                <hr>
-                <span class="income span-size">
-                    <span class="mat-body center-text" fxFlex="40%">
-                        Remaining income this month:
-                    </span>
-                    <div class="income-text center-text">
-                        <span class="mat-body-2">
-                            {{user.income | currency}}
-                        </span>
-                    </div>
-                </span>
-                <hr>
                 <span class="table">
                     <span class="center-text" fxFlex="40%">
-                        Current expenses:
+                        Upcoming expenses:
                     </span>
                     <div class="exp-table">
                         <table mat-table [dataSource]="user.expenses" style="table-layout: fixed;" 
