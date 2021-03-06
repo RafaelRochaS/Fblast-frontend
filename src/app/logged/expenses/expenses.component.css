@@ -3,11 +3,6 @@
     margin-bottom: 3em;
 }
 
-.profile {
-    font-size: 5em;
-    padding-top: 0.3em;
-}
-
 .center-text{
     margin: auto;
 }
@@ -16,30 +11,17 @@
     font-size: 1.3em;
 }
 
-.income {
-    margin-top: 1em;
-}
-
-.income-text {
-    background-color:#fff;
-    border:1px solid;    
-    height:100px;
-    border-radius:50%;
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
-    width:100px;
-    line-height: 100px;
-}
-
 .span-size {
     height: 9em;
 }
 
 .table {
-    height: 14em;
+    height: 20em;
 }
 
 .exp-table {
+    width: 100%;
+    margin: 2em auto auto 2em;
     overflow-x: auto;
     overflow-y: auto;
 }
@@ -48,3 +30,10 @@
     font-size: smaller;
 }
 
+.add-expense {
+    margin-top: 2em;
+}
+
+.btn-add-expense {
+    margin-bottom: 2em;
+}

@@ -6,6 +6,7 @@ import { LoggedHomeComponent } from './logged-home/logged-home.component';
 import { MaterialModule } from '../material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ExpensesComponent } from './expenses/expenses.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +16,8 @@ import { ExpensesComponent } from './expenses/expenses.component';
     LoggedRoutingModule,
     MaterialModule,
     FlexLayoutModule,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class LoggedModule { }

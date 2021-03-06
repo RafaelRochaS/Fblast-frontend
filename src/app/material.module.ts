@@ -16,7 +16,7 @@ const modules = [
   MatCardModule,
   MatInputModule,
   MatCheckboxModule,
-  MatTableModule
+  MatTableModule,
 ];
 
 
