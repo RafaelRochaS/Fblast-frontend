@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { IUser } from '../models/userData.model';
+import { IUser, IExpenses } from '../models/userData.model';
 
 const defaultUser: IUser = {
     name: 'Joe Da Quebrada',
@@ -40,5 +40,11 @@ export class UserDataService {
 
     getUserData(): Observable<IUser> {
         return this.currentUser$;
+    }
+
+    updateExpenses(exp: IExpenses[]): void {
+        const newValue = this.currentUser$.value;
+        newValue.expenses = exp;
+        this.currentUser$.next(newValue);
     }
 }
