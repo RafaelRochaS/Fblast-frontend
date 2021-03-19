@@ -1,4 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'src/app/material.module';
 
 import { ExpensesComponent } from './expenses.component';
 
@@ -8,7 +11,13 @@ describe('ExpensesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExpensesComponent ]
+      declarations: [ ExpensesComponent ],
+      imports: [
+        MaterialModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule
+      ]
     })
     .compileComponents();
   }));
